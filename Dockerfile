@@ -1,4 +1,4 @@
-FROM python:3.9-alpine
+FROM alpine:3.13
 
 ARG PACKER_VERSION=1.7.0
 ARG PACKER_PLATFORM=linux_amd64
