@@ -1,5 +1,0 @@
-#!/bin/bash
-
-readonly VERSION=1.7.0-ansible-2.10.6
-docker tag $IMAGE_NAME $DOCKER_REPO:$VERSION
-docker push $DOCKER_REPO:$VERSION
