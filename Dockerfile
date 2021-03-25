@@ -21,3 +21,4 @@ RUN wget https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER
 RUN addgroup packer && adduser packer -G packer -D
 
 USER packer
+WORKDIR /home/packer
