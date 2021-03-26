@@ -17,8 +17,3 @@ RUN wget https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER
     && unzip packer_1.7.0_linux_amd64.zip -d /usr/local/bin \
     && rm packer_${PACKER_VERSION}_linux_amd64.zip packer_${PACKER_VERSION}_SHA256SUMS \
     && apk add --no-cache ansible=${ANSIBLE_VERSION} ansible-lint=${ANSIBLE_LINT_VERSION} jq
-
-RUN addgroup packer && adduser packer -G packer -D
-
-USER packer
-WORKDIR /home/packer
