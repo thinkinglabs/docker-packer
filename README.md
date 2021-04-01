@@ -6,7 +6,7 @@ an extra configuration management tool.
 All images contain:
 
 - `jq`: for parsing the optional manifest file produced by Packer
-- `make`: for when using a Makefile to bootstrap Packer
+- `make`: for using a Makefile to bootstrap Packer
 
 ## Supported tags
 
