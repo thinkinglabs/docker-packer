@@ -1,8 +1,8 @@
 # docker-packer-with-ansible
 
 Alpine based Docker image with [Hashicorp Packer](https://www.packer.io/)
-and [Ansible](https://docs.ansible.com/ansible/latest/index.html) as
-configuration management tool.
+and [Ansible](https://docs.ansible.com/ansible/latest/index.html) and
+[ansible-lint](https://github.com/ansible-community/ansible-lint).
 
 This image was primarily implemented with [Concourse](https://concourse-ci.org)
 in mind, i.e. to be used as an image resource for a Concourse task.
