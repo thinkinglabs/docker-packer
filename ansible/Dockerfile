@@ -7,8 +7,8 @@ ARG ANSIBLE_LINT_VERSION=4.3.7-r1
 
 LABEL org.opencontainers.image.description="Hashicorp Packer with Ansible" \
       org.opencontainers.image.authors="ThinkingLabs (hello@thinkinglabs.io)" \
-      org.opencontainers.image.url="https://github.com/thinkinglabs/docker-packer-with-ansible" \
-      org.opencontainers.image.source="git@github.com:thinkinglabs/docker-packer-with-ansible.git" \
+      org.opencontainers.image.url="https://github.com/thinkinglabs/docker-packer" \
+      org.opencontainers.image.source="git@github.com:thinkinglabs/docker-packer.git" \
       org.opencontainers.image.licenses="MIT"
 
 RUN wget https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_${PACKER_PLATFORM}.zip \
