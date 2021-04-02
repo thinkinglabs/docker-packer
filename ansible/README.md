@@ -4,12 +4,12 @@ Alpine based Docker image with [Hashicorp Packer](https://www.packer.io/)
 and [Ansible](https://docs.ansible.com/ansible/latest/index.html) and
 [ansible-lint](https://github.com/ansible-community/ansible-lint).
 
-This image was primarily implemented with [Concourse](https://concourse-ci.org)
-in mind, i.e. to be used as an image resource for a Concourse task.
+The image is primarily implemented for use as an image resource for a
+[Concourse](https://concourse-ci.org) task.
+Therefore, no `ENTRYPOINT` is defined and the container runs as root.
 
-When [Concourse tasks are run as non-root user it can not create files inside
-output directories](https://github.com/concourse/concourse/issues/403).
-To work around this, Packer runs as root.
+Concourse has some issues running tasks as non-root users, i.e.
+[Concourse tasks ran as non-root users can not create files inside output directories](https://github.com/concourse/concourse/issues/403).
 
 [Hashicorp advises against this](https://www.packer.io/docs/provisioners/ansible#become-yes).
 Because Ansible `become: yes` will fail. To fix this, provide a `user` to the
