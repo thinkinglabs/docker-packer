@@ -7,12 +7,6 @@ ARG PACKER_DIST_CHECKSUM_FILENAME=packer_${PACKER_VERSION}_SHA256SUMS
 ARG ANSIBLE_VERSION=2.10.6-r0
 ARG ANSIBLE_LINT_VERSION=4.3.7-r1
 
-# TODO: ARG PARCKER_DIST_FILENAME
-# TODO replace 1.7.0 by PACKER_VERSION
-# TODO replace linux_amd64 by PLATFORM
-# TODO read platform from uname -s (os) and uname -m (processor)
-# see https://github.com/terraform-linters/tflint/blob/master/install_linux.sh
-
 LABEL org.opencontainers.image.description="Hashicorp Packer with Ansible" \
       org.opencontainers.image.authors="ThinkingLabs (hello@thinkinglabs.io)" \
       org.opencontainers.image.url="https://github.com/thinkinglabs/docker-packer" \
