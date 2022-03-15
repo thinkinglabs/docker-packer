@@ -1,11 +1,11 @@
-FROM alpine:edge
+FROM alpine:3.15
 
 ARG PLATFORM=linux_amd64
 ARG PACKER_VERSION=1.8.0
 ARG PACKER_DIST_FILENAME=packer_${PACKER_VERSION}_${PLATFORM}.zip
 ARG PACKER_DIST_CHECKSUM_FILENAME=packer_${PACKER_VERSION}_SHA256SUMS
-ARG ANSIBLE_VERSION=5.4.0-r0
-ARG ANSIBLE_LINT_VERSION=5.4.0-r0
+ARG ANSIBLE_VERSION=4.8.0-r0
+ARG ANSIBLE_LINT_VERSION=4.3.7-r4
 
 LABEL org.opencontainers.image.description="Hashicorp Packer with Ansible" \
       org.opencontainers.image.authors="ThinkingLabs (hello@thinkinglabs.io)" \
