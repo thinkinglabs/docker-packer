@@ -11,3 +11,4 @@ All images contain:
 ## Supported tags
 
 - [1.7.0-ansible-2.10.6](ansible/README.md): Packer 1.7.0 with Ansible 2.10.6
+- [v1.8.0-ansible-4.8.0](ansible/README.md): Packer 1.8.0 with Ansible 4.8.0
