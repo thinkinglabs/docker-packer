@@ -18,4 +18,6 @@ RUN wget https://releases.hashicorp.com/packer/${PACKER_VERSION}/${PACKER_DIST_F
     && set -o pipefail && grep ${PLATFORM} ${PACKER_DIST_CHECKSUM_FILENAME} | sha256sum -c - \
     && unzip ${PACKER_DIST_FILENAME} -d /usr/local/bin \
     && rm ${PACKER_DIST_FILENAME} ${PACKER_DIST_CHECKSUM_FILENAME} \
-    && apk add --no-cache ansible=${ANSIBLE_VERSION} ansible-lint=${ANSIBLE_LINT_VERSION} jq make
+    && apk add --no-cache ansible=${ANSIBLE_VERSION} ansible-lint=${ANSIBLE_LINT_VERSION} py3-pip jq make \
+    && pip install filelock \
+    && apk del py3-pip
