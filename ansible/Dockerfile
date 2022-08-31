@@ -5,7 +5,7 @@ ARG PACKER_VERSION=1.8.3
 ARG PACKER_DIST_FILENAME=packer_${PACKER_VERSION}_${PLATFORM}.zip
 ARG PACKER_DIST_CHECKSUM_FILENAME=packer_${PACKER_VERSION}_SHA256SUMS
 ARG ANSIBLE_VERSION=6.3.0-r0
-ARG ANSIBLE_LINT_VERSION=6.5.0-r0
+ARG ANSIBLE_LINT_VERSION=6.5.1-r0
 
 LABEL org.opencontainers.image.description="Hashicorp Packer with Ansible" \
       org.opencontainers.image.authors="ThinkingLabs (hello@thinkinglabs.io)" \
