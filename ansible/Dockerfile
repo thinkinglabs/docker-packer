@@ -1,11 +1,11 @@
 FROM alpine:edge
 
 ARG PLATFORM=linux_amd64
-ARG PACKER_VERSION=1.8.3
+ARG PACKER_VERSION=1.8.5
 ARG PACKER_DIST_FILENAME=packer_${PACKER_VERSION}_${PLATFORM}.zip
 ARG PACKER_DIST_CHECKSUM_FILENAME=packer_${PACKER_VERSION}_SHA256SUMS
-ARG ANSIBLE_VERSION=6.3.0-r0
-ARG ANSIBLE_LINT_VERSION=6.5.1-r0
+ARG ANSIBLE_VERSION=7.2.0-r0
+ARG ANSIBLE_LINT_VERSION=6.11.0-r0
 
 LABEL org.opencontainers.image.description="Hashicorp Packer with Ansible" \
       org.opencontainers.image.authors="ThinkingLabs (hello@thinkinglabs.io)" \
@@ -18,6 +18,4 @@ RUN wget https://releases.hashicorp.com/packer/${PACKER_VERSION}/${PACKER_DIST_F
     && set -o pipefail && grep ${PLATFORM} ${PACKER_DIST_CHECKSUM_FILENAME} | sha256sum -c - \
     && unzip ${PACKER_DIST_FILENAME} -d /usr/local/bin \
     && rm ${PACKER_DIST_FILENAME} ${PACKER_DIST_CHECKSUM_FILENAME} \
-    && apk add --no-cache ansible=${ANSIBLE_VERSION} ansible-lint=${ANSIBLE_LINT_VERSION} py3-pip jq make \
-    && pip install filelock \
-    && apk del py3-pip
+    && apk add --no-cache ansible=${ANSIBLE_VERSION} ansible-lint=${ANSIBLE_LINT_VERSION} py3-filelock jq make
