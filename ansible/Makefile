@@ -9,7 +9,7 @@ tag: ## Tag git repo
 
 build: ## Build Docker image
 	echo "[${version}]"
-	docker build --tag ghrc.io/thinkinglabs/packer:${version} .
+	docker build --tag ghcr.io/thinkinglabs/packer:${version} .
 
 help:
 	@grep -h -E '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
